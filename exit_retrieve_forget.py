@@ -48,12 +48,12 @@ def exit_program(root) :
     new_root.iconphoto(False, img)
     new_root.title("Goodbye Message")
     new_root.protocol("WM_DELETE_WINDOW",on_click_2)
-    label_goodbye = Label(new_root, bg='black', fg='white', width=50, font=("Helvetica", 15, 'bold'),
-                          text="\n\nThanks for using our app.\nPress anywhere to exit."
-                               "\n\n\n""Produced by :\n\n\nΜaria Papananoy\nAthanasios Seretoudis\nRafail Koutalis\n\n\n")
+    new_root.configure(bg="black")
+    label_goodbye = Label(new_root, bg='black', fg='white', width=30, font=("Helvetica", 15, 'bold'),
+                          text="\n\nThanks for using our app!\n\nUntil next time!\n\nPress anywhere to exit.")
     label_goodbye.grid(row=0)
     new_root.bind("<Button>",on_click)
-    center_window(new_root, 600, 350)
+    center_window(new_root, 360, 250)
 
 
 
