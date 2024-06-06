@@ -96,7 +96,7 @@ def print_history(root,username,label_hi,button_deposit, button_withdraw, button
             canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
             canvas.configure(yscrollcommand=scrollbar.set)
 
-            label_header = Label(scrollable_frame, text=" Transaction History", font=("Helvetica", 14, "bold"), bg="black", fg="white")
+            label_header = Label(scrollable_frame, text="  Transaction History", font=("Helvetica", 14, "bold"), bg="black", fg="white")
             label_amount = Label(scrollable_frame, text="\nAmount\n", font=("Helvetica", 14, "bold"), bg="black", fg="white")
             label_type = Label(scrollable_frame, text="\nType\n", font=("Helvetica", 14, "bold"), bg="black", fg="white")
             label_balance = Label(scrollable_frame, text=" Total\n  Balance", font=("Helvetica", 13, "bold"), bg="black", fg="white")
@@ -132,7 +132,6 @@ def print_history(root,username,label_hi,button_deposit, button_withdraw, button
             new_button_exit.grid(row=3, column=0)
     except :
             messagebox.showerror("Error", "No transactions have been made yet.")
-
 
 
 
