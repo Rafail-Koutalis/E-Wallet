@@ -7,7 +7,6 @@ def show_graph(username):
             plt.close()
         except :
             pass
-
         #getting each date, using try/except, and if else, cause table might not exist.
         list_date_data = []
         cursor.execute(f"""SELECT DATE FROM "Transaction" WHERE USERNAME = '{username}' """)
@@ -60,6 +59,4 @@ def show_graph(username):
             plt.plot(list_date_data, final_amount_data, '-gD')
             plt.gcf().autofmt_xdate()
             plt.show()
-
-        # messagebox.showerror("Error","No transactions have been made yet.")
 
