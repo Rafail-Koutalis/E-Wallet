@@ -16,6 +16,9 @@ Month-2-month and 3-months to 3-months graphs features will be added in the near
 2)If you want to build it (through Pyinstaller package),you will need to use CMD, so make sure python is added to PATH. first install pyinstaller using(on the cmd) : pip install pyinstaller 
 Then , use : cd directory_where_you_saved_the_files. Then copy/paste this command : pyinstaller --onefile --windowed --icon=wallet_money_business_coin_dollar_icon_150710.ico --add-data "exit_retrieve_forget.py;." --add-data "graph.py;." --add-data "login_signup.py;." --add-data "numbers_on_grid.py;." --add-data "other_functions.py;." --add-data "transaction_history.py;." --add-data "smartphone.png;." root_main.py
 
+If the installation is complete, go to the original directory (where the .py files are saved), and you will see a filed named "dist". In this file, you will find the executable app.
+Due to the parameter --onefile, the executable is a bit slower to start. If you want that to change, you can replace it with --onefolder.
+
 Be sure to enjoy, and if you see have any recommendations, dont hesitate :)
 
 
