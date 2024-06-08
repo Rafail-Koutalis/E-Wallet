@@ -1,16 +1,21 @@
 # E-Wallet
 This is the very first real app i took part in creating.
 
-To run it, you must run the root_main.py file. You must also install the following modules :
--matplotlib
--tkinter
--os
--sys
--sqlite3
+The App :
 
-Do not forget to download the smartphone.png, and in case you want to build the app using pyinstaller, you have to download the .ico that is included.
-Very very very special thanks to my co-engineers who took part in this project :
--Maria Papananou (Hellenic Open University)
--Athanasios Seretoudis (Hellenic Open University)
+-Helps you easily keep track of your day 2 day transactions.
+-It is build upon an SQLITE3 database, which is stored locally, so each computer can support more than 1 users per installation.
+-Each user has his own unique credentials.
+-If its the first time the app is used on a computer (meaning no data have been stored yet and the database is empty) you can only sign in and not log in.
+-The different actions you can do are : Deposit money/ Withdraw money / see the transaction History / see the daily balance graph (only stores the available balance at the end of the day)
+
+Month-2-month and 3-months to 3-months graphs features will be added in the near future, to store and see your economic progress in a longer time spectrum.
+
+
+1)If you DONT want to build the app, you can just run the root_main.py file.
+2)If you want to build it (through Pyinstaller package),you will need to use CMD, so make sure python is added to PATH. first install pyinstaller using(on the cmd) : pip install pyinstaller 
+Then , use : cd directory_where_you_saved_the_files. Then copy/paste this command : pyinstaller --onefile --windowed --icon=wallet_money_business_coin_dollar_icon_150710.ico --add-data "exit_retrieve_forget.py;." --add-data "graph.py;." --add-data "login_signup.py;." --add-data "numbers_on_grid.py;." --add-data "other_functions.py;." --add-data "transaction_history.py;." --add-data "smartphone.png;." root_main.py
+
+Be sure to enjoy, and if you see have any recommendations, dont hesitate :)
 
 
