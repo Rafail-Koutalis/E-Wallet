@@ -31,7 +31,10 @@ root.title(f"{username}'s Wallet")
 root.bind("<Return>",on_click)
 root.bind("<Escape>",on_click_2)
 root.protocol("WM_DELETE_WINDOW", on_closing)
-filepath = os.getcwd() + r"\smartphone.png"
+if system() == "Windows":
+    filepath = os.getcwd() + r"\smartphone.png"
+else:
+    filepath = os.getcwd() + r"/smartphone.png"
 img = PhotoImage(file=filepath)
 root.iconphoto(False, img)
 
