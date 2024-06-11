@@ -15,12 +15,16 @@ def run_module() :
     def on_closing():
         sys.exit()
 
-    filepath = os.getcwd() + r"\smartphone.png"
+    if platform.system() == "Windows" :
+        filepath = os.getcwd() + r"\smartphone.png"
+    else :
+        filepath = os.getcwd() + r"/smartphone.png"
+
     root = Tk()
     root.bind("<Escape>", escape)
-    root.protocol("WM_DELETE_WINDOW", on_closing)
     img = PhotoImage(file=filepath)
     root.iconphoto(False, img)
+    root.protocol("WM_DELETE_WINDOW", on_closing)
 
 
     def sign_up(root):
