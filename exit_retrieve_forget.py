@@ -43,7 +43,10 @@ def exit_program(root) :
 
     root.destroy()
     new_root = Tk()
-    filepath = os.getcwd() + r"\smartphone.png"
+    if system() == "Windows":
+        filepath = os.getcwd() + r"\smartphone.png"
+    else:
+        filepath = os.getcwd() + r"/smartphone.png"
     img = PhotoImage(file=filepath)
     new_root.iconphoto(False, img)
     new_root.title("Goodbye Message")
